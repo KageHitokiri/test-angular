@@ -10,8 +10,10 @@ export class ZapatillasComponent implements OnInit{
     public titulo: string = "Componente de zapatillas";
     public zapatillas: Array<Zapatilla>;
     public marcas: String[];
+    public color: string;
     
     constructor(){
+        this.color = 'orange';
         this.marcas = new Array();
         this.zapatillas = [
             new Zapatilla('Nike Red',"Nike","Rojo",90,true),
@@ -33,7 +35,6 @@ export class ZapatillasComponent implements OnInit{
                 this.marcas.push(zapatilla.marca);
             }
         });
-        console.log(this.marcas);
     }
 
 }
