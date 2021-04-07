@@ -1,7 +1,10 @@
 <div>
   <h1>{{ title }}</h1>
 </div>
-<div>
+
+<button (click)="ocultarVideojuegos(false)" *ngIf="mostrarVideojuegos">Ocultar</button>
+<button (click)="ocultarVideojuegos(true)" *ngIf="!mostrarVideojuegos">Mostrar</button>
+<div *ngIf="mostrarVideojuegos"> 
   <videojuego>
     
   </videojuego>
