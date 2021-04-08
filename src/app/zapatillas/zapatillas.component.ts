@@ -47,4 +47,12 @@ export class ZapatillasComponent implements OnInit{
         this.marcas.splice(index, 1);
     }
 
+    onBlur(){
+        console.log("Has salido del campo");
+    }
+
+    mostrarPalabra(){
+        alert(this.miMarca);
+    }
+
 }
