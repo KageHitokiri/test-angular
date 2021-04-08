@@ -8,3 +8,6 @@
 .subrayado{
     text-decoration: underline;
 }
+.active{
+    border: 3px solid green;
+}
