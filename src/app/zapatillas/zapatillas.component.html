@@ -4,7 +4,10 @@
 <button (click)="addMarca()">Añadir marca</button>
 <p>Compra las zapatillas de las mejores marcas</p>
 <ul>
-    <li *ngFor="let marca of marcas; let indice = index">{{(indice+1) +' '+ marca}}</li>
+    <li *ngFor="let marca of marcas; let indice = index">
+        {{(indice+1) +' '+ marca}}
+        <button (click)="borrarMarca(indice)">Eliminar Marca</button>
+    </li>
 </ul>
 <p>Modelos disponibles</p>
 <ul>
@@ -24,6 +27,7 @@
     </li>
 </ul>
 <p>El color de la mayoría de nuestras zapatillas es:</p>
+<input type="text" [(ngModel)]="color"/>
 <ul [ngSwitch]="color">
     <li *ngSwitchCase="'yellow'">
         El color predominante es el <span [ngStyle]="{
