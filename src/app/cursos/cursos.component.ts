@@ -12,7 +12,7 @@ export class CursosComponent implements OnInit {
 
   constructor(
     private _route: ActivatedRoute,
-    private router: Router
+    private _router: Router
   ) { }
 
   ngOnInit(): void {
@@ -20,7 +20,10 @@ export class CursosComponent implements OnInit {
       this.nombre = params.nombre;
       this.followers = +params.followers;
     });
+  }
 
+  redirigir(){
+    this._router.navigate(['/zapatillas']);
   }
 
 }
