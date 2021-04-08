@@ -17,7 +17,12 @@
         }">
             {{zapatilla.nombre}}
             - 
-            <strong [class.altoPrecio]="zapatilla.precio>=80"
+            <strong 
+            [class.altoPrecio]="zapatilla.precio>=80"
+            [ngClass]="{
+                'fondoRojo':zapatilla.precio > 100,
+                'subrayado':zapatilla.marca == 'Nike'
+            }"
             >{{zapatilla.precio}}€ 
             </strong></span>
    
