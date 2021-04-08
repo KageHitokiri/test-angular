@@ -17,13 +17,15 @@
         }">
             {{zapatilla.nombre}}
             - 
-            <strong>{{zapatilla.precio}}€ </strong></span>
+            <strong [class.altoPrecio]="zapatilla.precio>=80"
+            >{{zapatilla.precio}}€ 
+            </strong></span>
    
             <span *ngIf="zapatilla.precio<=80"
             [style.background]="zapatilla.precio<=80 ? 'green':'transparent'"
             [style.color]="zapatilla.precio<=80 ? 'white':'black'"
             >¡En oferta!
-           </span>
+        </span>
     </li>
 </ul>
 <p>El color de la mayoría de nuestras zapatillas es:</p>
