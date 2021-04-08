@@ -11,6 +11,7 @@ export class ZapatillasComponent implements OnInit{
     public zapatillas: Array<Zapatilla>;
     public marcas: String[];
     public color: string;
+    public miMarca:string;
     
     constructor(){
         this.color = 'orange';
@@ -35,6 +36,10 @@ export class ZapatillasComponent implements OnInit{
                 this.marcas.push(zapatilla.marca);
             }
         });
+    }
+
+    addMarca(){
+        this.marcas.push(this.miMarca);
     }
 
 }
